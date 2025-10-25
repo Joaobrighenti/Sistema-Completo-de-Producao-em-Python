@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Background Geral */
+body {
+  background: linear-gradient(135deg, #eeecec 0%, #c6c8cc 50%, #f1f5f9 100%) !important;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+/* Aumenta a largura do tooltip da tabela para evitar quebra de linha */
+.dash-table-tooltip {
+    max-width: none !important;
+    width: max-content !important;
+    min-width: 1200px;
+  }
+/* Pills Color */
+.nav-pills .nav-link.active {
+  background-color: rgb(2, 8, 61);
+  color: #ffffff;
+}
+
+.btn-custom {
+  background-color: #0d6efd !important;  /* azul Bootstrap */
+  color: white !important;
+  border: none !important;
+}
+
+.nav-pills .nav-link{
+  color: white;
+}
+
+/* Textos gerais */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  text-transform: none;
+}
+
+/* Card Hover Animations */
+@keyframes border_in {
+  from {
+    border: 3px solid transparent;
+  }
+  to {
+    border: 3px solid rgb(0, 81, 255);
+  }
+}
+
+@keyframes border_out {
+  from {
+    border: 3px solid rgb(0, 81, 255);
+  }
+  to {
+    border: 3px solid transparent;
+  }
+}
+
+.card_padrao {
+  animation: border_out 4s;
+  animation-fill-mode: forwards;
+}
+
+.card_padrao:hover {
+  animation: border_in 5s;
+  animation-fill-mode: forwards;
+}
+
+.card-borda-preta {
+  border: 1px solid #3a1a77;
+  border-radius: 8px;
+}
+
+
+/* Estilo para a tabela principal */
+#tabela_pcp_cal {
+  border-collapse: collapse; /* Remover espaçamento entre células */
+  width: 100%; /* Tabela ocupa 100% da largura do container */
+  overflow-x: auto;
+}
+
+/* Estilo para as células da tabela */
+#tabela_pcp_cal td, #tabela_pcp_cal th {
+  border: 1px solid #080808; /* Bordas leves para separar células */
+  padding: 8px; /* Adiciona espaçamento interno */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Cor de fundo das células no cabeçalho */
+#tabela_pcp_cal th {
+  background-color: #00084d; /* Cor de fundo para o cabeçalho */
+  font-weight: bold;
+  color: white; /* Deixa o texto do cabeçalho em negrito */
+}
+
+/* Hover nas linhas para destaque */
+#tabela_pcp_cal tr:hover {
+  background-color: #79a4ff; /* Cor de fundo ao passar o mouse sobre a linha */
+}
+
+/* Estilo para as linhas de dados (diferente do cabeçalho) */
+#tabela_pcp_cal tr:nth-child(even) {
+  background-color: #f9f9f9; /* Cor para linhas pares */
+}
+
+#tabela_pcp_cal tr:nth-child(odd) {
+  background-color: #ffffff; /* Cor para linhas ímpares */
+}
+
+/* Estilo para a tabela quando ela tiver um scroll vertical */
+#tabela_pcp_cal div.dash-table-container {
+  max-height: 500px; /* Limita a altura da tabela */
+  overflow-y: scroll; /* Permite o scroll vertical */
+}
+
+.modal-dialog {
+  max-width: 80% !important;  
+  width: 80% !important;      
+}
+
+.modal-medio .modal-dialog{
+  max-width: 100%;  /* Defina a largura máxima desejada */
+  width: 100%;      /* Defina a largura desejada */
+}
+
+
+.modal-custom .modal-dialog {
+  max-width: 80% !important;  /* Força a largura máxima */
+  width: 80% !important;      /* Força a largura */
+}
+
+
+
+.custom-modal .modal-dialog {
+  width: 100% !important;
+  max-width: 95vw !important;
+}
+
+
+.custom-modal-medio .modal-dialog {
+  width: 100% !important;
+  max-width: 1300px !important;
+}
+
+.custom-modal-produto .modal-dialog {
+    width: 100% !important;
+    max-width: 1600px !important;
+  }
+
+/* --- Sidebar Styling --- */
+#sidebar-col {
+  background-color: #cecece; /* Cinza claro */
+  min-height: 100vh; /* Garante que a coluna ocupe a altura inteira da tela */
+}
+
+/* Style for buttons inside the admin collapse */
+#collapse-admin .btn {
+    background-color: #ffffff !important; /* White background */
+    color: #000000 !important; /* Dark grey text */
+    border: 1px solid #dee2e6 !important; /* Subtle border */
+    text-align: left !important; /* Ensure text is left-aligned */
+    margin-bottom: 0.25rem !important; /* Reduced space between buttons */
+    font-weight: 500 !important;
+}
+
+#collapse-admin .btn:hover {
+    background-color: #ffc107 !important; /* Slightly darker hover */
+    border-color: #ced4da !important;
+}
+
+#collapse-quality .btn {
+  background-color: #ffffff !important; /* White background */
+  color: #000000 !important; /* Dark grey text */
+  border: 1px solid #dee2e6 !important; /* Subtle border */
+  text-align: left !important; /* Ensure text is left-aligned */
+  margin-bottom: 0.25rem !important; /* Reduced space between buttons */
+  font-weight: 500 !important;
+}
+
+#collapse-quality .btn:hover {
+  background-color: #f8f9fa !important; /* Slightly darker hover */
+  border-color: #ced4da !important;
+}
+
+/* --- Estilos para os 3 botões principais do sistema --- */
+.btn-sistema-pcp {
+    background: linear-gradient(135deg, #e0d144, #e0d144) !important;
+    color: #000000 !important; /* Texto preto */
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.btn-sistema-pcp:hover {
+    background: linear-gradient(135deg, #ffe600, #ffe600) !important;
+    color: #000000 !important; /* Mantém o texto preto no hover */
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-sistema-compras {
+    background: linear-gradient(135deg, #e0d144, #e0d144) !important;
+    color: #000000 !important; /* Texto preto */
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.btn-sistema-compras:hover {
+    background: linear-gradient(135deg, #ffe600, #ffe600) !important;
+    color: #000000 !important; /* Mantém o texto preto no hover */
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-dashboard-compras {
+    background: linear-gradient(135deg, #a5c9da, #a5c9da) !important;
+    color: #000000 !important; /* Texto preto */
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.btn-dashboard-compras:hover {
+    background: linear-gradient(135deg, #90d0ee, #90d0ee) !important;
+    color: #000000 !important; /* Mantém texto preto no hover */
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-dashboard-pcp {
+    background: linear-gradient(135deg, #a5c9da, #a5c9da) !important;
+    color: #000000 !important; /* Texto preto */
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.btn-dashboard-pcp:hover {
+    background: linear-gradient(135deg, #90d0ee, #90d0ee) !important;
+    color: #000000 !important; /* Mantém texto preto no hover */
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-sistema-oee {
+    background: linear-gradient(135deg, #e0d144, #e0d144) !important;
+    color: #000000 !important; /* Texto preto */
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.btn-sistema-oee:hover {
+    background: linear-gradient(135deg, #ffe600, #ffe600) !important;
+    color: #000000 !important; /* Mantém o texto preto no hover */
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-dashboard-oee {
+    background: linear-gradient(135deg, #a5c9da, #a5c9da) !important;
+    color: #000000 !important; /* Texto preto */
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.btn-dashboard-oee:hover {
+    background: linear-gradient(135deg, #90d0ee, #90d0ee) !important;
+    color: #000000 !important; /* Mantém texto preto no hover */
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+/* --- End Sidebar Styling --- */
+
+
+/* --- Modal Positioning --- */
+.modal.show .modal-dialog {
+    margin-top: 10vh !important; /* Push modal down from the top */
+    /* You could also try adjusting align-items if the parent uses flexbox */
+    /* align-self: flex-start; /* If parent is flex, align to top then use margin */
+}
+/* --- End Modal Positioning --- */
+
+/* Estilos do Calendário */
+.calendar-container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; /* Adiciona uma borda sutil */
+}
+
+.calendar-weekday-header {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #6c757d; /* Cinza Bootstrap */
+}
+
+.calendar-cell {
+    min-height: 110px; /* Aumentar um pouco a altura mínima */
+    height: 100%; /* Ocupar altura da coluna */
+    border: 1px solid #dee2e6;
+    padding: 0.4rem;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Empilhar dia e eventos */
+    background-color: #fff; /* Fundo branco padrão */
+}
+
+.calendar-cell.empty {
+    background-color: #f8f9fa;
+    border-color: #e9ecef; /* Borda mais clara para células vazias */
+}
+
+.calendar-day {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #495057;
+    font-size: 0.85rem;
+    text-align: right; /* Alinha número do dia à direita */
+    padding-right: 0.2rem;
+}
+
+.calendar-events {
+    flex-grow: 1; /* Ocupa espaço restante */
+    overflow-y: auto;
+    max-height: 75px; /* Limitar altura da área de eventos */
+    scrollbar-width: thin; /* Barra de rolagem fina (Firefox) */
+    scrollbar-color: #ccc #f0f0f0; /* Cor da barra (Firefox) */
+}
+
+/* Estilo para barra de rolagem Webkit (Chrome, Safari) */
+.calendar-events::-webkit-scrollbar {
+    width: 5px;
+}
+.calendar-events::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+.calendar-events::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+}
+
+.calendar-event {
+    font-size: 0.75rem; /* Reduzir tamanho da fonte do evento */
+    padding: 0.2rem 0.3rem;
+    margin-bottom: 0.2rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default; /* Cursor padrão */
+    line-height: 1.2; /* Ajustar altura da linha */
+}
+
+.event-text {
+    display: inline; /* Garante que nome e valor fiquem na mesma linha */
+}
+
+.calendar-event:hover {
+    background-color: #dee2e6;
+}
+
+/* Estilo para a tab ativa */
+.nav-tabs .nav-link.active {
+    background-color: #8e9eab;
+    color: white;
+    border-color: #8e9eab;
+}
+
+.nav-tabs .nav-link {
+    color: #495057;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: #8e9eab;
+    color: #8e9eab;
+}
+
+/* --- Estilos para os botões da página de compras --- */
+.btn-compras-custom {
+    border-radius: 0px !important; /* Bordas retas */
+    border: 2px solid transparent !important;
+    font-weight: 600 !important;
+    padding: 8px 16px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    text-transform: uppercase !important;
+    font-size: 0.85rem !important;
+}
+
+.btn-filtrar-custom {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    border-color: #004085 !important;
+    color: white !important;
+}
+
+.btn-filtrar-custom:hover {
+    background: linear-gradient(135deg, #0056b3, #004085) !important;
+    border-color: #002752 !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-limpar-custom {
+    background: linear-gradient(135deg, #6c757d, #495057) !important;
+    border-color: #343a40 !important;
+    color: white !important;
+}
+
+.btn-limpar-custom:hover {
+    background: linear-gradient(135deg, #495057, #343a40) !important;
+    border-color: #1d2124 !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-lancar-custom {
+    background: linear-gradient(135deg, #28a745, #1e7e34) !important;
+    border-color: #155724 !important;
+    color: white !important;
+}
+
+.btn-lancar-custom:hover {
+    background: linear-gradient(135deg, #1e7e34, #155724) !important;
+    border-color: #0a3622 !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-fornecedor-custom {
+    background: linear-gradient(135deg, #17a2b8, #117a8b) !important;
+    border-color: #0c5460 !important;
+    color: white !important;
+}
+
+.btn-fornecedor-custom:hover {
+    background: linear-gradient(135deg, #117a8b, #0c5460) !important;
+    border-color: #062c33 !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-export-custom {
+  background: linear-gradient(135deg, #dc3545, #c82333) !important;
+  border-color: #161515 !important;
+  color: white !important;
+}
+
+.btn-export-custom:hover {
+  background: linear-gradient(135deg, #c82333, #bd2130) !important;
+  border-color: #a71e2a !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-carregamento-custom {
+    background: linear-gradient(135deg, #ffc107, #e0a800) !important;
+    border-color: #131313 !important;
+    color: #212529 !important;
+}
+
+.btn-carregamento-custom:hover {
+    background: linear-gradient(135deg, #e0a800, #c69500) !important;
+    border-color: #070707 !important;
+    color: #212529 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.btn-cotacao-custom {
+    background: linear-gradient(135deg, #343a40, #23272b) !important;
+    border-color: #0c0c0c !important;
+    color: white !important;
+}
+
+.btn-cotacao-custom:hover {
+    background: linear-gradient(135deg, #23272b, #1d2124) !important;
+    border-color: #0c0e10 !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+/* Efeito de click nos botões */
+.btn-compras-custom:active {
+    transform: translateY(0px) !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1) !important;
+}
+
+/* --- Estilos para campos de filtro da página de compras --- */
+/* Inputs de texto */
+#filtro-solicitacao,
+#filtro-solicitante,
+#filtro-setor,
+#filtro-produto,
+#filtro-sku {
+    border-radius: 0px !important;
+    border: 2px solid #ced4da !important;
+    height: 38px !important;
+    padding: 6px 12px !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+}
+
+#filtro-solicitacao:focus,
+#filtro-solicitante:focus,
+#filtro-setor:focus,
+#filtro-produto:focus,
+#filtro-sku:focus {
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+    outline: none !important;
+}
+
+/* DatePicker */
+.DateInput_input {
+    border-radius: 0px !important;
+    border: 2px solid #ced4da !important;
+    height: 38px !important;
+    padding: 6px 12px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+}
+
+.DateInput {
+    width: 100% !important;
+}
+
+.DateInput_input:focus {
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+}
+
+/* Dropdown */
+.Select-control {
+    border-radius: 0px !important;
+    border: 2px solid #ced4da !important;
+    height: 38px !important;
+    min-height: 38px !important;
+}
+
+.Select-control:hover {
+    border-color: #007bff !important;
+}
+
+.Select-control.is-focused {
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+}
+
+/* Para dropdowns do Dash */
+.dash-dropdown .Select-control {
+    border-radius: 0px !important;
+    border: 2px solid #ced4da !important;
+    height: 38px !important;
+    min-height: 38px !important;
+}
+
+.dash-dropdown .Select-control:hover {
+    border-color: #007bff !important;
+}
+
+.dash-dropdown .Select-control.is-focused {
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+}
+
+/* Labels dos filtros */
+.form-label {
+    color: #495057 !important;
+    font-weight: 500 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Estilos para botões de edição em lote */
+.btn-edicao-lote {
+    background: linear-gradient(135deg, #ffc107, #ff8c00) !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    padding: 8px 16px !important;
+    font-size: 0.875rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(255, 193, 7, 0.3) !important;
+}
+
+.btn-edicao-lote:hover {
+    background: linear-gradient(135deg, #ff8c00, #ffc107) !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.4) !important;
+}
+
+.btn-edicao-lote:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 4px rgba(255, 193, 7, 0.3) !important;
+}
+
+/* Contador de seleções */
+.contador-selecoes {
+    font-size: 0.8rem !important;
+    color: #6c757d !important;
+    font-weight: 500 !important;
+}
+
+/* Estilo para o modal de edição em lote */
+.modal-edicao-lote .modal-header {
+    background: linear-gradient(135deg, #ffc107, #ff8c00) !important;
+    color: white !important;
+    border-bottom: none !important;
+}
+
+.modal-edicao-lote .modal-title {
+    font-weight: 600 !important;
+}
+
+/* Lista de ordens selecionadas */
+.lista-ordens-selecionadas .badge {
+    margin-right: 0.5rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+/* Animação para mostrar/ocultar botões */
+.btn-edicao-lote-container {
+    transition: opacity 0.3s ease, height 0.3s ease !important;
+}
+
+/* Estilo para tabelas com seleção múltipla */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+/* Destaque para linhas selecionadas */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table tbody tr.row-selected {
+    background-color: rgba(255, 193, 7, 0.1) !important;
+    border-left: 3px solid #ffc107 !important;
+}
+
+/* Checkbox de seleção */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table tbody tr td input[type="checkbox"] {
+    transform: scale(1.2) !important;
+    accent-color: #ffc107 !important;
+}
+
+/* --- End Sidebar Styling --- */
