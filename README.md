@@ -1,4 +1,4 @@
-# 🏭 Sistema de Gestão Industrial - PCP NICOPEL
+# 🏭 Sistema de Gestão Industrial - PCP
 
 ## 📋 Sobre o Sistema
 
