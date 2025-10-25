@@ -56,7 +56,7 @@ Na primeira execução do sistema, um usuário administrador será criado automa
 ### 🗂️ Estrutura de Módulos
 
 ```
-📁 Sistema PCP NICOPEL
+📁 Sistema PCP
 ├── 📁 banco_dados/          # Gerenciamento de dados
 ├── 📁 pcp/                  # Planejamento e Controle de Produção
 ├── 📁 compras/              # Sistema de Compras
@@ -351,16 +351,16 @@ checklist_items_por_produto = {
 
 ## 📄 Licença
 
-Sistema proprietário desenvolvido para NICOPEL.
+Sistema proprietário de João Gabriel Brighenti.
 
 ---
 
 ## 🏆 Créditos
 
-**Desenvolvido por:** Equipe de Desenvolvimento NICOPEL
+**Desenvolvido por:** João Gabriel Brighenti
 **Tecnologias:** Python, Dash, SQLite, Bootstrap
 **Versão:** 1.1.1.10
 
 ---
 
-*Sistema de Gestão Industrial PCP NICOPEL - Transformando dados em decisões inteligentes* 🏭📊
+*Sistema de Gestão Industrial PCP - Transformando dados em decisões inteligentes* 🏭📊
